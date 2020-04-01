@@ -40,7 +40,7 @@ func main() {
 	var files []string
 
 	err = filepath.Walk(dirName, func(path string, info os.FileInfo, err error) error {
-		if !strings.Contains(path, "Zone.Identifier") && !strings.Contains(path, "fixtures") {
+		if strings.Contains(path, ".mp4") {
 			files = append(files, path)
 		}
 		return nil
